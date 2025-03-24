@@ -1,4 +1,3 @@
-# api.py
 from flask import Flask, request, jsonify
 from utils import main, convert_sets_to_lists
 
