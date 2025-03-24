@@ -7,7 +7,6 @@ Prerequisites
 •	An internet connection is require for News API calls and gTTS.
 
 Steps for the setup
-
 •	Install these dependencies before using the main program, the requirements text file consists of all the package names and their version used.
 
 pip install -r requirements.txt
@@ -17,10 +16,11 @@ python3 -m spacy download en_core_web_sm
 python3 -m textblob.download_corpora
 
 •	Run Flask
-
 python3 api.py
+
 •	Run Streamlit
 streamlit run app.py
+
 •	Visit http://localhost:8501 and enter a company name to fetch and analyze news.
 
 
