@@ -12,7 +12,7 @@ def main():
         if resp.status_code == 200:
             data = resp.json()
 
-            # 1. Display articles
+            # Display articles
             st.write(f"## Articles for {company}")
             articles = data.get("Articles", [])
             for idx, article in enumerate(articles, start=1):
@@ -23,12 +23,12 @@ def main():
                 st.write(f"**Topics:** {', '.join(article['Topics'])}")
                 st.write("---")
 
-            # 2. Comparative Sentiment Score
+            # Comparative Sentiment Score
             comparative_score = data.get("Comparative Sentiment Score", {})
             st.write("## Comparative Sentiment Score")
             st.json(comparative_score)
 
-            # 3. Final Sentiment + Audio
+            # Final Sentiment + Audio
             final_analysis = data.get("Final Sentiment Analysis", {})
             st.write("## Final Sentiment Analysis")
             st.write(final_analysis.get("text", "No text found."))
